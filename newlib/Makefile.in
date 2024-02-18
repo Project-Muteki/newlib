@@ -582,10 +582,34 @@ check_PROGRAMS =
 @HAVE_LIBC_SYS_MMIXWARE_DIR_TRUE@	libc/sys/mmixware/times.c libc/sys/mmixware/gettime.c libc/sys/mmixware/setjmp.S
 
 @HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@am__append_52 = \
-@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/applet_lifecycle.c \
-@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/malloc.c \
-@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/sleep.c \
-@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/syscalls.c
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/applet_main.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/applet_reset.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/applet_startup.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/closedir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/cwd.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/dirfd.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/_exit.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/fstatvfs.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/fsync.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/io.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/malloc.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/mkdir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/mutekishims_utils.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/nowide.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/opendir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/readdir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/readdir_r.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/renamer.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/rewinddir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/rmdir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/scandir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/seekdir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/sleep.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/statvfs.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/statvfs_common.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/syscalls.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/telldir.c \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@    libc/sys/muteki/tls.c
 
 @HAVE_LIBC_SYS_NETWARE_DIR_TRUE@am__append_53 = \
 @HAVE_LIBC_SYS_NETWARE_DIR_TRUE@	libc/sys/netware/getpid.c \
@@ -1733,10 +1757,34 @@ am__objects_51 = libc/ssp/libc_a-chk_fail.$(OBJEXT) \
 @HAVE_LIBC_SYS_MMIXWARE_DIR_TRUE@	libc/sys/mmixware/libc_a-times.$(OBJEXT) \
 @HAVE_LIBC_SYS_MMIXWARE_DIR_TRUE@	libc/sys/mmixware/libc_a-gettime.$(OBJEXT) \
 @HAVE_LIBC_SYS_MMIXWARE_DIR_TRUE@	libc/sys/mmixware/libc_a-setjmp.$(OBJEXT)
-@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@am__objects_63 = libc/sys/muteki/libc_a-applet_lifecycle.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@am__objects_63 = libc/sys/muteki/libc_a-applet_main.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-applet_reset.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-applet_startup.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-closedir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-cwd.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-dirfd.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-_exit.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-fstatvfs.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-fsync.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-io.$(OBJEXT) \
 @HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-malloc.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-mkdir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-mutekishims_utils.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-nowide.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-opendir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-readdir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-readdir_r.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-renamer.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-rewinddir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-rmdir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-scandir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-seekdir.$(OBJEXT) \
 @HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-sleep.$(OBJEXT) \
-@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-syscalls.$(OBJEXT)
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-statvfs.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-statvfs_common.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-syscalls.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-telldir.$(OBJEXT) \
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@	libc/sys/muteki/libc_a-tls.$(OBJEXT)
 @HAVE_LIBC_SYS_NETWARE_DIR_TRUE@am__objects_64 = libc/sys/netware/libc_a-getpid.$(OBJEXT) \
 @HAVE_LIBC_SYS_NETWARE_DIR_TRUE@	libc/sys/netware/libc_a-link.$(OBJEXT)
 @HAVE_LIBC_SYS_OR1K_DIR_TRUE@am__objects_65 = libc/sys/or1k/libc_a-getreent.$(OBJEXT) \
@@ -7527,17 +7575,86 @@ libc/sys/muteki/$(am__dirstamp):
 libc/sys/muteki/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) libc/sys/muteki/$(DEPDIR)
 	@: > libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
-libc/sys/muteki/libc_a-applet_lifecycle.$(OBJEXT):  \
+libc/sys/muteki/libc_a-applet_main.$(OBJEXT):  \
 	libc/sys/muteki/$(am__dirstamp) \
 	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-applet_reset.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-applet_startup.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-closedir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-cwd.$(OBJEXT): libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-dirfd.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-_exit.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-fstatvfs.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-fsync.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-io.$(OBJEXT): libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
 libc/sys/muteki/libc_a-malloc.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-mkdir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-mutekishims_utils.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-nowide.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-opendir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-readdir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-readdir_r.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-renamer.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-rewinddir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-rmdir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-scandir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-seekdir.$(OBJEXT):  \
 	libc/sys/muteki/$(am__dirstamp) \
 	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
 libc/sys/muteki/libc_a-sleep.$(OBJEXT):  \
 	libc/sys/muteki/$(am__dirstamp) \
 	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-statvfs.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-statvfs_common.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
 libc/sys/muteki/libc_a-syscalls.$(OBJEXT):  \
 	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-telldir.$(OBJEXT):  \
+	libc/sys/muteki/$(am__dirstamp) \
+	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
+libc/sys/muteki/libc_a-tls.$(OBJEXT): libc/sys/muteki/$(am__dirstamp) \
 	libc/sys/muteki/$(DEPDIR)/$(am__dirstamp)
 libc/sys/netware/$(am__dirstamp):
 	@$(MKDIR_P) libc/sys/netware
@@ -14036,10 +14153,34 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/mmixware/$(DEPDIR)/libc_a-utime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/mmixware/$(DEPDIR)/libc_a-wait.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/mmixware/$(DEPDIR)/libc_a-write.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-applet_lifecycle.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-_exit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-applet_main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-applet_reset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-applet_startup.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-closedir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-cwd.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-dirfd.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-fstatvfs.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-fsync.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-io.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-malloc.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-mkdir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-mutekishims_utils.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-nowide.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-opendir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-readdir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-readdir_r.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-renamer.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-rewinddir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-rmdir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-scandir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-seekdir.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-sleep.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-statvfs.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-statvfs_common.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-syscalls.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-telldir.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libc/sys/muteki/$(DEPDIR)/libc_a-tls.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/netware/$(DEPDIR)/libc_a-getpid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/netware/$(DEPDIR)/libc_a-link.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libc/sys/or1k/$(DEPDIR)/libc_a-getreent.Po@am__quote@
@@ -31826,19 +31967,145 @@ libc/sys/mmixware/libc_a-gettime.obj: libc/sys/mmixware/gettime.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/mmixware/libc_a-gettime.obj `if test -f 'libc/sys/mmixware/gettime.c'; then $(CYGPATH_W) 'libc/sys/mmixware/gettime.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/mmixware/gettime.c'; fi`
 
-libc/sys/muteki/libc_a-applet_lifecycle.o: libc/sys/muteki/applet_lifecycle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_lifecycle.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_lifecycle.Tpo -c -o libc/sys/muteki/libc_a-applet_lifecycle.o `test -f 'libc/sys/muteki/applet_lifecycle.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_lifecycle.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_lifecycle.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_lifecycle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_lifecycle.c' object='libc/sys/muteki/libc_a-applet_lifecycle.o' libtool=no @AMDEPBACKSLASH@
+libc/sys/muteki/libc_a-applet_main.o: libc/sys/muteki/applet_main.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_main.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_main.Tpo -c -o libc/sys/muteki/libc_a-applet_main.o `test -f 'libc/sys/muteki/applet_main.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_main.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_main.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_main.c' object='libc/sys/muteki/libc_a-applet_main.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_lifecycle.o `test -f 'libc/sys/muteki/applet_lifecycle.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_lifecycle.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_main.o `test -f 'libc/sys/muteki/applet_main.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_main.c
 
-libc/sys/muteki/libc_a-applet_lifecycle.obj: libc/sys/muteki/applet_lifecycle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_lifecycle.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_lifecycle.Tpo -c -o libc/sys/muteki/libc_a-applet_lifecycle.obj `if test -f 'libc/sys/muteki/applet_lifecycle.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_lifecycle.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_lifecycle.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_lifecycle.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_lifecycle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_lifecycle.c' object='libc/sys/muteki/libc_a-applet_lifecycle.obj' libtool=no @AMDEPBACKSLASH@
+libc/sys/muteki/libc_a-applet_main.obj: libc/sys/muteki/applet_main.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_main.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_main.Tpo -c -o libc/sys/muteki/libc_a-applet_main.obj `if test -f 'libc/sys/muteki/applet_main.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_main.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_main.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_main.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_main.c' object='libc/sys/muteki/libc_a-applet_main.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_lifecycle.obj `if test -f 'libc/sys/muteki/applet_lifecycle.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_lifecycle.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_lifecycle.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_main.obj `if test -f 'libc/sys/muteki/applet_main.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_main.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_main.c'; fi`
+
+libc/sys/muteki/libc_a-applet_reset.o: libc/sys/muteki/applet_reset.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_reset.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_reset.Tpo -c -o libc/sys/muteki/libc_a-applet_reset.o `test -f 'libc/sys/muteki/applet_reset.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_reset.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_reset.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_reset.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_reset.c' object='libc/sys/muteki/libc_a-applet_reset.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_reset.o `test -f 'libc/sys/muteki/applet_reset.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_reset.c
+
+libc/sys/muteki/libc_a-applet_reset.obj: libc/sys/muteki/applet_reset.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_reset.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_reset.Tpo -c -o libc/sys/muteki/libc_a-applet_reset.obj `if test -f 'libc/sys/muteki/applet_reset.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_reset.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_reset.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_reset.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_reset.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_reset.c' object='libc/sys/muteki/libc_a-applet_reset.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_reset.obj `if test -f 'libc/sys/muteki/applet_reset.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_reset.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_reset.c'; fi`
+
+libc/sys/muteki/libc_a-applet_startup.o: libc/sys/muteki/applet_startup.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_startup.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_startup.Tpo -c -o libc/sys/muteki/libc_a-applet_startup.o `test -f 'libc/sys/muteki/applet_startup.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_startup.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_startup.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_startup.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_startup.c' object='libc/sys/muteki/libc_a-applet_startup.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_startup.o `test -f 'libc/sys/muteki/applet_startup.c' || echo '$(srcdir)/'`libc/sys/muteki/applet_startup.c
+
+libc/sys/muteki/libc_a-applet_startup.obj: libc/sys/muteki/applet_startup.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-applet_startup.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-applet_startup.Tpo -c -o libc/sys/muteki/libc_a-applet_startup.obj `if test -f 'libc/sys/muteki/applet_startup.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_startup.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_startup.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-applet_startup.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-applet_startup.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/applet_startup.c' object='libc/sys/muteki/libc_a-applet_startup.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-applet_startup.obj `if test -f 'libc/sys/muteki/applet_startup.c'; then $(CYGPATH_W) 'libc/sys/muteki/applet_startup.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/applet_startup.c'; fi`
+
+libc/sys/muteki/libc_a-closedir.o: libc/sys/muteki/closedir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-closedir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-closedir.Tpo -c -o libc/sys/muteki/libc_a-closedir.o `test -f 'libc/sys/muteki/closedir.c' || echo '$(srcdir)/'`libc/sys/muteki/closedir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-closedir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-closedir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/closedir.c' object='libc/sys/muteki/libc_a-closedir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-closedir.o `test -f 'libc/sys/muteki/closedir.c' || echo '$(srcdir)/'`libc/sys/muteki/closedir.c
+
+libc/sys/muteki/libc_a-closedir.obj: libc/sys/muteki/closedir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-closedir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-closedir.Tpo -c -o libc/sys/muteki/libc_a-closedir.obj `if test -f 'libc/sys/muteki/closedir.c'; then $(CYGPATH_W) 'libc/sys/muteki/closedir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/closedir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-closedir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-closedir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/closedir.c' object='libc/sys/muteki/libc_a-closedir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-closedir.obj `if test -f 'libc/sys/muteki/closedir.c'; then $(CYGPATH_W) 'libc/sys/muteki/closedir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/closedir.c'; fi`
+
+libc/sys/muteki/libc_a-cwd.o: libc/sys/muteki/cwd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-cwd.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-cwd.Tpo -c -o libc/sys/muteki/libc_a-cwd.o `test -f 'libc/sys/muteki/cwd.c' || echo '$(srcdir)/'`libc/sys/muteki/cwd.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-cwd.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-cwd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/cwd.c' object='libc/sys/muteki/libc_a-cwd.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-cwd.o `test -f 'libc/sys/muteki/cwd.c' || echo '$(srcdir)/'`libc/sys/muteki/cwd.c
+
+libc/sys/muteki/libc_a-cwd.obj: libc/sys/muteki/cwd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-cwd.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-cwd.Tpo -c -o libc/sys/muteki/libc_a-cwd.obj `if test -f 'libc/sys/muteki/cwd.c'; then $(CYGPATH_W) 'libc/sys/muteki/cwd.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/cwd.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-cwd.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-cwd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/cwd.c' object='libc/sys/muteki/libc_a-cwd.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-cwd.obj `if test -f 'libc/sys/muteki/cwd.c'; then $(CYGPATH_W) 'libc/sys/muteki/cwd.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/cwd.c'; fi`
+
+libc/sys/muteki/libc_a-dirfd.o: libc/sys/muteki/dirfd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-dirfd.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-dirfd.Tpo -c -o libc/sys/muteki/libc_a-dirfd.o `test -f 'libc/sys/muteki/dirfd.c' || echo '$(srcdir)/'`libc/sys/muteki/dirfd.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-dirfd.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-dirfd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/dirfd.c' object='libc/sys/muteki/libc_a-dirfd.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-dirfd.o `test -f 'libc/sys/muteki/dirfd.c' || echo '$(srcdir)/'`libc/sys/muteki/dirfd.c
+
+libc/sys/muteki/libc_a-dirfd.obj: libc/sys/muteki/dirfd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-dirfd.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-dirfd.Tpo -c -o libc/sys/muteki/libc_a-dirfd.obj `if test -f 'libc/sys/muteki/dirfd.c'; then $(CYGPATH_W) 'libc/sys/muteki/dirfd.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/dirfd.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-dirfd.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-dirfd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/dirfd.c' object='libc/sys/muteki/libc_a-dirfd.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-dirfd.obj `if test -f 'libc/sys/muteki/dirfd.c'; then $(CYGPATH_W) 'libc/sys/muteki/dirfd.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/dirfd.c'; fi`
+
+libc/sys/muteki/libc_a-_exit.o: libc/sys/muteki/_exit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-_exit.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-_exit.Tpo -c -o libc/sys/muteki/libc_a-_exit.o `test -f 'libc/sys/muteki/_exit.c' || echo '$(srcdir)/'`libc/sys/muteki/_exit.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-_exit.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-_exit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/_exit.c' object='libc/sys/muteki/libc_a-_exit.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-_exit.o `test -f 'libc/sys/muteki/_exit.c' || echo '$(srcdir)/'`libc/sys/muteki/_exit.c
+
+libc/sys/muteki/libc_a-_exit.obj: libc/sys/muteki/_exit.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-_exit.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-_exit.Tpo -c -o libc/sys/muteki/libc_a-_exit.obj `if test -f 'libc/sys/muteki/_exit.c'; then $(CYGPATH_W) 'libc/sys/muteki/_exit.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/_exit.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-_exit.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-_exit.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/_exit.c' object='libc/sys/muteki/libc_a-_exit.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-_exit.obj `if test -f 'libc/sys/muteki/_exit.c'; then $(CYGPATH_W) 'libc/sys/muteki/_exit.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/_exit.c'; fi`
+
+libc/sys/muteki/libc_a-fstatvfs.o: libc/sys/muteki/fstatvfs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-fstatvfs.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-fstatvfs.Tpo -c -o libc/sys/muteki/libc_a-fstatvfs.o `test -f 'libc/sys/muteki/fstatvfs.c' || echo '$(srcdir)/'`libc/sys/muteki/fstatvfs.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-fstatvfs.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-fstatvfs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/fstatvfs.c' object='libc/sys/muteki/libc_a-fstatvfs.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-fstatvfs.o `test -f 'libc/sys/muteki/fstatvfs.c' || echo '$(srcdir)/'`libc/sys/muteki/fstatvfs.c
+
+libc/sys/muteki/libc_a-fstatvfs.obj: libc/sys/muteki/fstatvfs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-fstatvfs.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-fstatvfs.Tpo -c -o libc/sys/muteki/libc_a-fstatvfs.obj `if test -f 'libc/sys/muteki/fstatvfs.c'; then $(CYGPATH_W) 'libc/sys/muteki/fstatvfs.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/fstatvfs.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-fstatvfs.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-fstatvfs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/fstatvfs.c' object='libc/sys/muteki/libc_a-fstatvfs.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-fstatvfs.obj `if test -f 'libc/sys/muteki/fstatvfs.c'; then $(CYGPATH_W) 'libc/sys/muteki/fstatvfs.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/fstatvfs.c'; fi`
+
+libc/sys/muteki/libc_a-fsync.o: libc/sys/muteki/fsync.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-fsync.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-fsync.Tpo -c -o libc/sys/muteki/libc_a-fsync.o `test -f 'libc/sys/muteki/fsync.c' || echo '$(srcdir)/'`libc/sys/muteki/fsync.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-fsync.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-fsync.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/fsync.c' object='libc/sys/muteki/libc_a-fsync.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-fsync.o `test -f 'libc/sys/muteki/fsync.c' || echo '$(srcdir)/'`libc/sys/muteki/fsync.c
+
+libc/sys/muteki/libc_a-fsync.obj: libc/sys/muteki/fsync.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-fsync.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-fsync.Tpo -c -o libc/sys/muteki/libc_a-fsync.obj `if test -f 'libc/sys/muteki/fsync.c'; then $(CYGPATH_W) 'libc/sys/muteki/fsync.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/fsync.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-fsync.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-fsync.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/fsync.c' object='libc/sys/muteki/libc_a-fsync.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-fsync.obj `if test -f 'libc/sys/muteki/fsync.c'; then $(CYGPATH_W) 'libc/sys/muteki/fsync.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/fsync.c'; fi`
+
+libc/sys/muteki/libc_a-io.o: libc/sys/muteki/io.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-io.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-io.Tpo -c -o libc/sys/muteki/libc_a-io.o `test -f 'libc/sys/muteki/io.c' || echo '$(srcdir)/'`libc/sys/muteki/io.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-io.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-io.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/io.c' object='libc/sys/muteki/libc_a-io.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-io.o `test -f 'libc/sys/muteki/io.c' || echo '$(srcdir)/'`libc/sys/muteki/io.c
+
+libc/sys/muteki/libc_a-io.obj: libc/sys/muteki/io.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-io.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-io.Tpo -c -o libc/sys/muteki/libc_a-io.obj `if test -f 'libc/sys/muteki/io.c'; then $(CYGPATH_W) 'libc/sys/muteki/io.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/io.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-io.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-io.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/io.c' object='libc/sys/muteki/libc_a-io.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-io.obj `if test -f 'libc/sys/muteki/io.c'; then $(CYGPATH_W) 'libc/sys/muteki/io.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/io.c'; fi`
 
 libc/sys/muteki/libc_a-malloc.o: libc/sys/muteki/malloc.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-malloc.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-malloc.Tpo -c -o libc/sys/muteki/libc_a-malloc.o `test -f 'libc/sys/muteki/malloc.c' || echo '$(srcdir)/'`libc/sys/muteki/malloc.c
@@ -31854,6 +32121,160 @@ libc/sys/muteki/libc_a-malloc.obj: libc/sys/muteki/malloc.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-malloc.obj `if test -f 'libc/sys/muteki/malloc.c'; then $(CYGPATH_W) 'libc/sys/muteki/malloc.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/malloc.c'; fi`
 
+libc/sys/muteki/libc_a-mkdir.o: libc/sys/muteki/mkdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-mkdir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-mkdir.Tpo -c -o libc/sys/muteki/libc_a-mkdir.o `test -f 'libc/sys/muteki/mkdir.c' || echo '$(srcdir)/'`libc/sys/muteki/mkdir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-mkdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-mkdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/mkdir.c' object='libc/sys/muteki/libc_a-mkdir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-mkdir.o `test -f 'libc/sys/muteki/mkdir.c' || echo '$(srcdir)/'`libc/sys/muteki/mkdir.c
+
+libc/sys/muteki/libc_a-mkdir.obj: libc/sys/muteki/mkdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-mkdir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-mkdir.Tpo -c -o libc/sys/muteki/libc_a-mkdir.obj `if test -f 'libc/sys/muteki/mkdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/mkdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/mkdir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-mkdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-mkdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/mkdir.c' object='libc/sys/muteki/libc_a-mkdir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-mkdir.obj `if test -f 'libc/sys/muteki/mkdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/mkdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/mkdir.c'; fi`
+
+libc/sys/muteki/libc_a-mutekishims_utils.o: libc/sys/muteki/mutekishims_utils.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-mutekishims_utils.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-mutekishims_utils.Tpo -c -o libc/sys/muteki/libc_a-mutekishims_utils.o `test -f 'libc/sys/muteki/mutekishims_utils.c' || echo '$(srcdir)/'`libc/sys/muteki/mutekishims_utils.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-mutekishims_utils.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-mutekishims_utils.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/mutekishims_utils.c' object='libc/sys/muteki/libc_a-mutekishims_utils.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-mutekishims_utils.o `test -f 'libc/sys/muteki/mutekishims_utils.c' || echo '$(srcdir)/'`libc/sys/muteki/mutekishims_utils.c
+
+libc/sys/muteki/libc_a-mutekishims_utils.obj: libc/sys/muteki/mutekishims_utils.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-mutekishims_utils.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-mutekishims_utils.Tpo -c -o libc/sys/muteki/libc_a-mutekishims_utils.obj `if test -f 'libc/sys/muteki/mutekishims_utils.c'; then $(CYGPATH_W) 'libc/sys/muteki/mutekishims_utils.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/mutekishims_utils.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-mutekishims_utils.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-mutekishims_utils.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/mutekishims_utils.c' object='libc/sys/muteki/libc_a-mutekishims_utils.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-mutekishims_utils.obj `if test -f 'libc/sys/muteki/mutekishims_utils.c'; then $(CYGPATH_W) 'libc/sys/muteki/mutekishims_utils.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/mutekishims_utils.c'; fi`
+
+libc/sys/muteki/libc_a-nowide.o: libc/sys/muteki/nowide.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-nowide.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-nowide.Tpo -c -o libc/sys/muteki/libc_a-nowide.o `test -f 'libc/sys/muteki/nowide.c' || echo '$(srcdir)/'`libc/sys/muteki/nowide.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-nowide.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-nowide.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/nowide.c' object='libc/sys/muteki/libc_a-nowide.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-nowide.o `test -f 'libc/sys/muteki/nowide.c' || echo '$(srcdir)/'`libc/sys/muteki/nowide.c
+
+libc/sys/muteki/libc_a-nowide.obj: libc/sys/muteki/nowide.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-nowide.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-nowide.Tpo -c -o libc/sys/muteki/libc_a-nowide.obj `if test -f 'libc/sys/muteki/nowide.c'; then $(CYGPATH_W) 'libc/sys/muteki/nowide.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/nowide.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-nowide.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-nowide.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/nowide.c' object='libc/sys/muteki/libc_a-nowide.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-nowide.obj `if test -f 'libc/sys/muteki/nowide.c'; then $(CYGPATH_W) 'libc/sys/muteki/nowide.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/nowide.c'; fi`
+
+libc/sys/muteki/libc_a-opendir.o: libc/sys/muteki/opendir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-opendir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-opendir.Tpo -c -o libc/sys/muteki/libc_a-opendir.o `test -f 'libc/sys/muteki/opendir.c' || echo '$(srcdir)/'`libc/sys/muteki/opendir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-opendir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-opendir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/opendir.c' object='libc/sys/muteki/libc_a-opendir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-opendir.o `test -f 'libc/sys/muteki/opendir.c' || echo '$(srcdir)/'`libc/sys/muteki/opendir.c
+
+libc/sys/muteki/libc_a-opendir.obj: libc/sys/muteki/opendir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-opendir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-opendir.Tpo -c -o libc/sys/muteki/libc_a-opendir.obj `if test -f 'libc/sys/muteki/opendir.c'; then $(CYGPATH_W) 'libc/sys/muteki/opendir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/opendir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-opendir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-opendir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/opendir.c' object='libc/sys/muteki/libc_a-opendir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-opendir.obj `if test -f 'libc/sys/muteki/opendir.c'; then $(CYGPATH_W) 'libc/sys/muteki/opendir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/opendir.c'; fi`
+
+libc/sys/muteki/libc_a-readdir.o: libc/sys/muteki/readdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-readdir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-readdir.Tpo -c -o libc/sys/muteki/libc_a-readdir.o `test -f 'libc/sys/muteki/readdir.c' || echo '$(srcdir)/'`libc/sys/muteki/readdir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-readdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-readdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/readdir.c' object='libc/sys/muteki/libc_a-readdir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-readdir.o `test -f 'libc/sys/muteki/readdir.c' || echo '$(srcdir)/'`libc/sys/muteki/readdir.c
+
+libc/sys/muteki/libc_a-readdir.obj: libc/sys/muteki/readdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-readdir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-readdir.Tpo -c -o libc/sys/muteki/libc_a-readdir.obj `if test -f 'libc/sys/muteki/readdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/readdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/readdir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-readdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-readdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/readdir.c' object='libc/sys/muteki/libc_a-readdir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-readdir.obj `if test -f 'libc/sys/muteki/readdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/readdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/readdir.c'; fi`
+
+libc/sys/muteki/libc_a-readdir_r.o: libc/sys/muteki/readdir_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-readdir_r.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-readdir_r.Tpo -c -o libc/sys/muteki/libc_a-readdir_r.o `test -f 'libc/sys/muteki/readdir_r.c' || echo '$(srcdir)/'`libc/sys/muteki/readdir_r.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-readdir_r.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-readdir_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/readdir_r.c' object='libc/sys/muteki/libc_a-readdir_r.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-readdir_r.o `test -f 'libc/sys/muteki/readdir_r.c' || echo '$(srcdir)/'`libc/sys/muteki/readdir_r.c
+
+libc/sys/muteki/libc_a-readdir_r.obj: libc/sys/muteki/readdir_r.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-readdir_r.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-readdir_r.Tpo -c -o libc/sys/muteki/libc_a-readdir_r.obj `if test -f 'libc/sys/muteki/readdir_r.c'; then $(CYGPATH_W) 'libc/sys/muteki/readdir_r.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/readdir_r.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-readdir_r.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-readdir_r.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/readdir_r.c' object='libc/sys/muteki/libc_a-readdir_r.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-readdir_r.obj `if test -f 'libc/sys/muteki/readdir_r.c'; then $(CYGPATH_W) 'libc/sys/muteki/readdir_r.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/readdir_r.c'; fi`
+
+libc/sys/muteki/libc_a-renamer.o: libc/sys/muteki/renamer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-renamer.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-renamer.Tpo -c -o libc/sys/muteki/libc_a-renamer.o `test -f 'libc/sys/muteki/renamer.c' || echo '$(srcdir)/'`libc/sys/muteki/renamer.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-renamer.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-renamer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/renamer.c' object='libc/sys/muteki/libc_a-renamer.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-renamer.o `test -f 'libc/sys/muteki/renamer.c' || echo '$(srcdir)/'`libc/sys/muteki/renamer.c
+
+libc/sys/muteki/libc_a-renamer.obj: libc/sys/muteki/renamer.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-renamer.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-renamer.Tpo -c -o libc/sys/muteki/libc_a-renamer.obj `if test -f 'libc/sys/muteki/renamer.c'; then $(CYGPATH_W) 'libc/sys/muteki/renamer.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/renamer.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-renamer.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-renamer.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/renamer.c' object='libc/sys/muteki/libc_a-renamer.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-renamer.obj `if test -f 'libc/sys/muteki/renamer.c'; then $(CYGPATH_W) 'libc/sys/muteki/renamer.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/renamer.c'; fi`
+
+libc/sys/muteki/libc_a-rewinddir.o: libc/sys/muteki/rewinddir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-rewinddir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-rewinddir.Tpo -c -o libc/sys/muteki/libc_a-rewinddir.o `test -f 'libc/sys/muteki/rewinddir.c' || echo '$(srcdir)/'`libc/sys/muteki/rewinddir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-rewinddir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-rewinddir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/rewinddir.c' object='libc/sys/muteki/libc_a-rewinddir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-rewinddir.o `test -f 'libc/sys/muteki/rewinddir.c' || echo '$(srcdir)/'`libc/sys/muteki/rewinddir.c
+
+libc/sys/muteki/libc_a-rewinddir.obj: libc/sys/muteki/rewinddir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-rewinddir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-rewinddir.Tpo -c -o libc/sys/muteki/libc_a-rewinddir.obj `if test -f 'libc/sys/muteki/rewinddir.c'; then $(CYGPATH_W) 'libc/sys/muteki/rewinddir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/rewinddir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-rewinddir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-rewinddir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/rewinddir.c' object='libc/sys/muteki/libc_a-rewinddir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-rewinddir.obj `if test -f 'libc/sys/muteki/rewinddir.c'; then $(CYGPATH_W) 'libc/sys/muteki/rewinddir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/rewinddir.c'; fi`
+
+libc/sys/muteki/libc_a-rmdir.o: libc/sys/muteki/rmdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-rmdir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-rmdir.Tpo -c -o libc/sys/muteki/libc_a-rmdir.o `test -f 'libc/sys/muteki/rmdir.c' || echo '$(srcdir)/'`libc/sys/muteki/rmdir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-rmdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-rmdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/rmdir.c' object='libc/sys/muteki/libc_a-rmdir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-rmdir.o `test -f 'libc/sys/muteki/rmdir.c' || echo '$(srcdir)/'`libc/sys/muteki/rmdir.c
+
+libc/sys/muteki/libc_a-rmdir.obj: libc/sys/muteki/rmdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-rmdir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-rmdir.Tpo -c -o libc/sys/muteki/libc_a-rmdir.obj `if test -f 'libc/sys/muteki/rmdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/rmdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/rmdir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-rmdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-rmdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/rmdir.c' object='libc/sys/muteki/libc_a-rmdir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-rmdir.obj `if test -f 'libc/sys/muteki/rmdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/rmdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/rmdir.c'; fi`
+
+libc/sys/muteki/libc_a-scandir.o: libc/sys/muteki/scandir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-scandir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-scandir.Tpo -c -o libc/sys/muteki/libc_a-scandir.o `test -f 'libc/sys/muteki/scandir.c' || echo '$(srcdir)/'`libc/sys/muteki/scandir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-scandir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-scandir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/scandir.c' object='libc/sys/muteki/libc_a-scandir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-scandir.o `test -f 'libc/sys/muteki/scandir.c' || echo '$(srcdir)/'`libc/sys/muteki/scandir.c
+
+libc/sys/muteki/libc_a-scandir.obj: libc/sys/muteki/scandir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-scandir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-scandir.Tpo -c -o libc/sys/muteki/libc_a-scandir.obj `if test -f 'libc/sys/muteki/scandir.c'; then $(CYGPATH_W) 'libc/sys/muteki/scandir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/scandir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-scandir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-scandir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/scandir.c' object='libc/sys/muteki/libc_a-scandir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-scandir.obj `if test -f 'libc/sys/muteki/scandir.c'; then $(CYGPATH_W) 'libc/sys/muteki/scandir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/scandir.c'; fi`
+
+libc/sys/muteki/libc_a-seekdir.o: libc/sys/muteki/seekdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-seekdir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-seekdir.Tpo -c -o libc/sys/muteki/libc_a-seekdir.o `test -f 'libc/sys/muteki/seekdir.c' || echo '$(srcdir)/'`libc/sys/muteki/seekdir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-seekdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-seekdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/seekdir.c' object='libc/sys/muteki/libc_a-seekdir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-seekdir.o `test -f 'libc/sys/muteki/seekdir.c' || echo '$(srcdir)/'`libc/sys/muteki/seekdir.c
+
+libc/sys/muteki/libc_a-seekdir.obj: libc/sys/muteki/seekdir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-seekdir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-seekdir.Tpo -c -o libc/sys/muteki/libc_a-seekdir.obj `if test -f 'libc/sys/muteki/seekdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/seekdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/seekdir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-seekdir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-seekdir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/seekdir.c' object='libc/sys/muteki/libc_a-seekdir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-seekdir.obj `if test -f 'libc/sys/muteki/seekdir.c'; then $(CYGPATH_W) 'libc/sys/muteki/seekdir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/seekdir.c'; fi`
+
 libc/sys/muteki/libc_a-sleep.o: libc/sys/muteki/sleep.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-sleep.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-sleep.Tpo -c -o libc/sys/muteki/libc_a-sleep.o `test -f 'libc/sys/muteki/sleep.c' || echo '$(srcdir)/'`libc/sys/muteki/sleep.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-sleep.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-sleep.Po
@@ -31868,6 +32289,34 @@ libc/sys/muteki/libc_a-sleep.obj: libc/sys/muteki/sleep.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-sleep.obj `if test -f 'libc/sys/muteki/sleep.c'; then $(CYGPATH_W) 'libc/sys/muteki/sleep.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/sleep.c'; fi`
 
+libc/sys/muteki/libc_a-statvfs.o: libc/sys/muteki/statvfs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-statvfs.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-statvfs.Tpo -c -o libc/sys/muteki/libc_a-statvfs.o `test -f 'libc/sys/muteki/statvfs.c' || echo '$(srcdir)/'`libc/sys/muteki/statvfs.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-statvfs.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-statvfs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/statvfs.c' object='libc/sys/muteki/libc_a-statvfs.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-statvfs.o `test -f 'libc/sys/muteki/statvfs.c' || echo '$(srcdir)/'`libc/sys/muteki/statvfs.c
+
+libc/sys/muteki/libc_a-statvfs.obj: libc/sys/muteki/statvfs.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-statvfs.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-statvfs.Tpo -c -o libc/sys/muteki/libc_a-statvfs.obj `if test -f 'libc/sys/muteki/statvfs.c'; then $(CYGPATH_W) 'libc/sys/muteki/statvfs.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/statvfs.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-statvfs.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-statvfs.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/statvfs.c' object='libc/sys/muteki/libc_a-statvfs.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-statvfs.obj `if test -f 'libc/sys/muteki/statvfs.c'; then $(CYGPATH_W) 'libc/sys/muteki/statvfs.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/statvfs.c'; fi`
+
+libc/sys/muteki/libc_a-statvfs_common.o: libc/sys/muteki/statvfs_common.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-statvfs_common.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-statvfs_common.Tpo -c -o libc/sys/muteki/libc_a-statvfs_common.o `test -f 'libc/sys/muteki/statvfs_common.c' || echo '$(srcdir)/'`libc/sys/muteki/statvfs_common.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-statvfs_common.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-statvfs_common.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/statvfs_common.c' object='libc/sys/muteki/libc_a-statvfs_common.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-statvfs_common.o `test -f 'libc/sys/muteki/statvfs_common.c' || echo '$(srcdir)/'`libc/sys/muteki/statvfs_common.c
+
+libc/sys/muteki/libc_a-statvfs_common.obj: libc/sys/muteki/statvfs_common.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-statvfs_common.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-statvfs_common.Tpo -c -o libc/sys/muteki/libc_a-statvfs_common.obj `if test -f 'libc/sys/muteki/statvfs_common.c'; then $(CYGPATH_W) 'libc/sys/muteki/statvfs_common.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/statvfs_common.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-statvfs_common.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-statvfs_common.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/statvfs_common.c' object='libc/sys/muteki/libc_a-statvfs_common.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-statvfs_common.obj `if test -f 'libc/sys/muteki/statvfs_common.c'; then $(CYGPATH_W) 'libc/sys/muteki/statvfs_common.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/statvfs_common.c'; fi`
+
 libc/sys/muteki/libc_a-syscalls.o: libc/sys/muteki/syscalls.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-syscalls.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-syscalls.Tpo -c -o libc/sys/muteki/libc_a-syscalls.o `test -f 'libc/sys/muteki/syscalls.c' || echo '$(srcdir)/'`libc/sys/muteki/syscalls.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-syscalls.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-syscalls.Po
@@ -31881,6 +32330,34 @@ libc/sys/muteki/libc_a-syscalls.obj: libc/sys/muteki/syscalls.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/syscalls.c' object='libc/sys/muteki/libc_a-syscalls.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-syscalls.obj `if test -f 'libc/sys/muteki/syscalls.c'; then $(CYGPATH_W) 'libc/sys/muteki/syscalls.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/syscalls.c'; fi`
+
+libc/sys/muteki/libc_a-telldir.o: libc/sys/muteki/telldir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-telldir.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-telldir.Tpo -c -o libc/sys/muteki/libc_a-telldir.o `test -f 'libc/sys/muteki/telldir.c' || echo '$(srcdir)/'`libc/sys/muteki/telldir.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-telldir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-telldir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/telldir.c' object='libc/sys/muteki/libc_a-telldir.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-telldir.o `test -f 'libc/sys/muteki/telldir.c' || echo '$(srcdir)/'`libc/sys/muteki/telldir.c
+
+libc/sys/muteki/libc_a-telldir.obj: libc/sys/muteki/telldir.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-telldir.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-telldir.Tpo -c -o libc/sys/muteki/libc_a-telldir.obj `if test -f 'libc/sys/muteki/telldir.c'; then $(CYGPATH_W) 'libc/sys/muteki/telldir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/telldir.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-telldir.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-telldir.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/telldir.c' object='libc/sys/muteki/libc_a-telldir.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-telldir.obj `if test -f 'libc/sys/muteki/telldir.c'; then $(CYGPATH_W) 'libc/sys/muteki/telldir.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/telldir.c'; fi`
+
+libc/sys/muteki/libc_a-tls.o: libc/sys/muteki/tls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-tls.o -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-tls.Tpo -c -o libc/sys/muteki/libc_a-tls.o `test -f 'libc/sys/muteki/tls.c' || echo '$(srcdir)/'`libc/sys/muteki/tls.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-tls.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-tls.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/tls.c' object='libc/sys/muteki/libc_a-tls.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-tls.o `test -f 'libc/sys/muteki/tls.c' || echo '$(srcdir)/'`libc/sys/muteki/tls.c
+
+libc/sys/muteki/libc_a-tls.obj: libc/sys/muteki/tls.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/muteki/libc_a-tls.obj -MD -MP -MF libc/sys/muteki/$(DEPDIR)/libc_a-tls.Tpo -c -o libc/sys/muteki/libc_a-tls.obj `if test -f 'libc/sys/muteki/tls.c'; then $(CYGPATH_W) 'libc/sys/muteki/tls.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/tls.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libc/sys/muteki/$(DEPDIR)/libc_a-tls.Tpo libc/sys/muteki/$(DEPDIR)/libc_a-tls.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libc/sys/muteki/tls.c' object='libc/sys/muteki/libc_a-tls.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -c -o libc/sys/muteki/libc_a-tls.obj `if test -f 'libc/sys/muteki/tls.c'; then $(CYGPATH_W) 'libc/sys/muteki/tls.c'; else $(CYGPATH_W) '$(srcdir)/libc/sys/muteki/tls.c'; fi`
 
 libc/sys/netware/libc_a-getpid.o: libc/sys/netware/getpid.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libc_a_CPPFLAGS) $(CPPFLAGS) $(libc_a_CFLAGS) $(CFLAGS) -MT libc/sys/netware/libc_a-getpid.o -MD -MP -MF libc/sys/netware/$(DEPDIR)/libc_a-getpid.Tpo -c -o libc/sys/netware/libc_a-getpid.o `test -f 'libc/sys/netware/getpid.c' || echo '$(srcdir)/'`libc/sys/netware/getpid.c
