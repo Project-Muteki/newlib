@@ -1003,6 +1003,7 @@ enable_newlib_long_time_t
 enable_newlib_use_gdtoa
 enable_newlib_use_malloc_in_execl
 enable_newlib_hw_misaligned_access
+enable_muteki_libc_heap_trace
 enable_multilib
 enable_target_optspace
 enable_malloc_debugging
@@ -1674,6 +1675,7 @@ Optional Features:
   --enable-newlib-use-gdtoa   Use gdtoa rather than legacy ldtoa
   --enable-newlib-use-malloc-in-execl   use malloc instead of alloca in execl, execle and execlp
   --enable-newlib-hw-misaligned-access   Use hardware word-by-word access instead of byte-by-byte for misaligned memory
+  --enable-muteki-libc-heap-trace   Automatically trace libc and user program heap usage for muteki target.
   --enable-multilib       build many library versions (default)
   --enable-target-optspace  optimize for space
   --enable-malloc-debugging indicate malloc debugging requested
@@ -2622,6 +2624,19 @@ if test "${enable_newlib_hw_misaligned_access+set}" = set; then :
  fi
 else
   newlib_hw_misaligned_access=
+fi
+
+# Check whether --enable-muteki-libc-heap-trace was given.
+if test "${enable_muteki_libc_heap_trace+set}" = set; then :
+  enableval=$enable_muteki_libc_heap_trace; if test "${muteki_libc_heap_trace+set}" != set; then
+  case "${enableval}" in
+    yes) muteki_libc_heap_trace=yes;;
+    no)  muteki_libc_heap_trace=no ;;
+    *)   as_fn_error $? "bad value ${enableval} for muteki-libc-heap-trace option" "$LINENO" 5 ;;
+  esac
+ fi
+else
+  muteki_libc_heap_trace=no
 fi
 
 # Default to --enable-multilib
@@ -6617,6 +6632,12 @@ fi
 if test "${newlib_reent_thread_local}" = "yes"; then
 
 $as_echo "#define _WANT_REENT_THREAD_LOCAL 1" >>confdefs.h
+
+fi
+
+if test "${muteki_libc_heap_trace}" = "yes"; then
+
+$as_echo "#define _ENABLE_MUTEKI_LIBC_HEAP_TRACE 1" >>confdefs.h
 
 fi
 
