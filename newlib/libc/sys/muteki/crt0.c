@@ -1,3 +1,6 @@
+#include <newlib.h>
+
+#include <locale.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/reent.h>
@@ -45,12 +48,16 @@ int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintptr_t _s
     // Do TLS stuff as early as possible and absolutely before init/after fini or horrible things could happen
     // (use-after-free, memory leaks, etc.)
     mutekix_tls_init_self();
-    
+
     // Run all initialization hooks
     __libc_init_array();
 
     // Save the execution context for exit() and start the app.
     if (!setjmp(__exit_jmp_buf)) {
+#ifdef _MB_CAPABLE
+        // Set the locale to UTF-8 by default. TODO: Why setting it in locale.c didn't work?
+        setlocale(LC_ALL, "C.UTF-8");
+#endif
         exit(applet_startup(exec_proto_ver, app_ctx, _sbz));
     }
 

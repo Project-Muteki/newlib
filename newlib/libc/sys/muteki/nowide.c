@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+#ifndef _HAS_SHORT_WCHAR
 // These are ported from newlib
 size_t __nowide_bestawcslen(const UTF16 *s) {
     const UTF16 *p;
@@ -327,6 +328,7 @@ size_t __nowide_bestawcstombs_r (struct _reent *r, char *__restrict s, const UTF
         return max;
     }
 }
+#endif
 
 // Shortcuts based on the above
 /**
