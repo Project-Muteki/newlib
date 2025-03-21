@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 */
 
-#include "dirent_common.c"
+#include "dirent_common.h"
 
 int readdir_r(DIR *restrict dirp, struct dirent *restrict entry, struct dirent **restrict result) {
     *result = NULL;

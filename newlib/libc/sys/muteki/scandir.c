@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 */
 
-#include "dirent_common.c"
+#include "dirent_common.h"
 
 int alphasort(const struct dirent **d1, const struct dirent **d2) {
     return (strcoll((*d1)->d_name, (*d2)->d_name));

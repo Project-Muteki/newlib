@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 */
 
-#include "dirent_common.c"
+#include "dirent_common.h"
 
 DIR *__opendir_common(int fd) {
     DIR *dirp = calloc(1, sizeof(DIR));
