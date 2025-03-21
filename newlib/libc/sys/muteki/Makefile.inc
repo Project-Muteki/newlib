@@ -3,28 +3,44 @@ libc_a_SOURCES += \
     %D%/applet_reset.c \
     %D%/applet_startup.c \
     %D%/closedir.c \
+    %D%/close_r.c \
     %D%/cwd.c \
     %D%/dirfd.c \
+    %D%/environ.c \
+    %D%/execve_r.c \
     %D%/_exit.c \
     %D%/fstatvfs.c \
     %D%/fsync.c \
+    %D%/getpid_r.c \
+    %D%/gettimeofday_r.c \
     %D%/heaptracer.c \
     %D%/io.c \
+    %D%/isatty_r.c \
+    %D%/kill_r.c \
+    %D%/link_r.c \
+    %D%/lseek_r.c \
     %D%/malloc.c \
     %D%/mkdir.c \
     %D%/mutekishims_utils.c \
     %D%/nowide.c \
     %D%/opendir.c \
+    %D%/open_r.c \
     %D%/readdir.c \
     %D%/readdir_r.c \
-    %D%/renamer.c \
+    %D%/read_r.c \
+    %D%/rename_r.c \
     %D%/rewinddir.c \
     %D%/rmdir.c \
+    %D%/sbrk_r.c \
     %D%/scandir.c \
     %D%/seekdir.c \
     %D%/sleep.c \
+    %D%/stat.c \
     %D%/statvfs.c \
     %D%/statvfs_common.c \
-    %D%/syscalls.c \
     %D%/telldir.c \
-    %D%/tls.c
+    %D%/times_r.c \
+    %D%/tls.c \
+    %D%/unlink_r.c \
+    %D%/wait_r.c \
+    %D%/write_r.c

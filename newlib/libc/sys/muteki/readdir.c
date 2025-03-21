@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 */
 
-#include "dirent_common.c"
+#include "dirent_common.h"
 
 static int find_ctx_to_dirent(struct dirent *out, const find_context_t *in) {
     __nowide_mbstate_t mbstate = {0};

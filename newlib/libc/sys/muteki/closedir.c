@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 */
 
-#include "dirent_common.c"
+#include "dirent_common.h"
 
 int closedir(DIR *dirp) {
     if (!dirp || !dirp->fd) {
