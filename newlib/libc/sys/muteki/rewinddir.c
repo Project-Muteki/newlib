@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 */
 
-#include "dirent_common.c"
+#include "dirent_common.h"
 
 void rewinddir(DIR *dirp) {
     find_context_t new_dirfd;

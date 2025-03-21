@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 */
 
-#include "dirent_common.c"
+#include "dirent_common.h"
 
 void seekdir(DIR *dirp, long int index) {
     if (!dirp) {
