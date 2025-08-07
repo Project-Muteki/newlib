@@ -40,7 +40,7 @@ libc_a_SOURCES += \
     %D%/statvfs_common.c \
     %D%/telldir.c \
     %D%/times_r.c \
-    %D%/tls.c \
+    %D%/tsr.c \
     %D%/unlink_r.c \
     %D%/wait_r.c \
     %D%/write_r.c
