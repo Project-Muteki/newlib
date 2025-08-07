@@ -10,7 +10,7 @@
 #include "mutekishims_utils.h"
 
 #ifdef _ENABLE_MUTEKI_LIBC_HEAP_TRACE
-#include <sys/heaptracer.h>
+#include <osdep/heap.h>
 #endif
 
 #include <osdep/utls.h>
@@ -42,7 +42,7 @@ static void __attribute__((constructor(1))) on_init() {
 __attribute__((used))
 static int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintptr_t _sbz) {
 #ifdef _ENABLE_MUTEKI_LIBC_HEAP_TRACE
-    heaptracer_start();
+    osdep_heap_trace_start();
 #endif
 
     // Run all initialization hooks
@@ -64,7 +64,7 @@ static int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintp
     }
 
 #ifdef _ENABLE_MUTEKI_LIBC_HEAP_TRACE
-    heaptracer_stop();
+    osdep_heap_trace_stop();
 #endif
     return __exit_value;
 }
