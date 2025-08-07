@@ -11,8 +11,6 @@
 extern int __exit_value;
 extern jmp_buf __exit_jmp_buf;
 
-extern int _start_after_fix(int exec_proto_ver, applet_args_v4_t *applet_args, uintptr_t _sbz);
-
 extern int applet_startup(int exec_proto_ver, applet_args_v4_t *applet_args, uintptr_t _sbz);
 extern int applet_main(char *dospath, int subroutine, void *applet_arg1, void *applet_arg2);
 extern void applet_reset();
