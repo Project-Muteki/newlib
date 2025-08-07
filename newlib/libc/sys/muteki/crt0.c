@@ -4,13 +4,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/reent.h>
+#include <sys/tsrctl.h>
+
 #include "applet_lifecycle.h"
 #include "mutekishims_utils.h"
-#include "tls.h"
 
 #ifdef _ENABLE_MUTEKI_LIBC_HEAP_TRACE
 #include <sys/heaptracer.h>
 #endif
+
+#include <osdep/utls.h>
 
 int __exit_value;
 jmp_buf __exit_jmp_buf;
@@ -34,20 +37,13 @@ static void goo_gone() {
 
 static void __attribute__((constructor(1))) on_init() {
     _init_muteki_io();
-
-    atexit(&_free_muteki_io);
-    atexit(&goo_gone);
 }
 
-int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintptr_t _sbz) {
+__attribute__((used))
+static int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintptr_t _sbz) {
 #ifdef _ENABLE_MUTEKI_LIBC_HEAP_TRACE
     heaptracer_start();
 #endif
-
-    // needed for main thread reent
-    // Do TLS stuff as early as possible and absolutely before init/after fini or horrible things could happen
-    // (use-after-free, memory leaks, etc.)
-    mutekix_tls_init_self();
 
     // Run all initialization hooks
     __libc_init_array();
@@ -61,7 +57,11 @@ int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintptr_t _s
         exit(applet_startup(exec_proto_ver, app_ctx, _sbz));
     }
 
-    mutekix_tls_free_self(MUTEKIX_TLS_KEY_TLS);
+    if (!tsrctl_get_flag()) {
+        _free_muteki_io();
+        goo_gone();
+        osdep_utls_cfini();
+    }
 
 #ifdef _ENABLE_MUTEKI_LIBC_HEAP_TRACE
     heaptracer_stop();
