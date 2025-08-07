@@ -5,10 +5,10 @@
 extern "C" {
 #endif
 
-#include <stdbool.h>
+#include <osdep/heap.h>
 
-extern bool heaptracer_start();
-extern bool heaptracer_stop();
+#define heaptracer_start() osdep_heap_trace_start()
+#define heaptracer_stop() osdep_heap_trace_stop()
 
 #ifdef __cplusplus
 }
