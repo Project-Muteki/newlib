@@ -13,7 +13,6 @@ libc_a_SOURCES += \
     %D%/fsync.c \
     %D%/getpid_r.c \
     %D%/gettimeofday_r.c \
-    %D%/heaptracer.c \
     %D%/io.c \
     %D%/isatty_r.c \
     %D%/kill_r.c \
