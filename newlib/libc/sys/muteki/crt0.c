@@ -19,6 +19,7 @@ int __exit_value;
 jmp_buf __exit_jmp_buf;
 
 extern void __libc_init_array(void);
+extern void __libc_fini_array(void);
 
 static void zap_sglue(struct _glue *next) {
     if (next == NULL) {
@@ -46,7 +47,9 @@ static int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintp
 #endif
 
     // Run all initialization hooks
-    __libc_init_array();
+    if (!tsrctl_get_flag()) {
+        __libc_init_array();
+    }
 
     // Save the execution context for exit() and start the app.
     if (!setjmp(__exit_jmp_buf)) {
@@ -54,12 +57,21 @@ static int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintp
         // Set the locale to UTF-8 by default. TODO: Why setting it in locale.c didn't work?
         setlocale(LC_ALL, "C.UTF-8");
 #endif
-        exit(applet_startup(exec_proto_ver, app_ctx, _sbz));
+        int exit_code = applet_startup(exec_proto_ver, app_ctx, _sbz);
+        if (tsrctl_get_flag()) {
+            // Skip STDIO auto-close if TSR flag is set.
+            __stdio_exit_handler = NULL;
+        }
+        exit(exit_code);
     }
 
     if (!tsrctl_get_flag()) {
         _free_muteki_io();
         goo_gone();
+        // We do not define __libc_fini so the destructors need to be called manually.
+        // This is intentional as otherwise it's difficult to ensure that this gets executed the last of all libc
+        // destructors, and only when TSR flag is unset.
+        __libc_fini_array();
         osdep_utls_cfini();
     }
 
