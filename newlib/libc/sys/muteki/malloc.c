@@ -1,7 +1,6 @@
 #include <_ansi.h>
 #include <errno.h>
 #include <reent.h>
-#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 #include <malloc.h>
