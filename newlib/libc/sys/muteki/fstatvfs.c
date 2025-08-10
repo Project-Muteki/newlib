@@ -10,7 +10,6 @@
 #include <muteki/fs.h>
 
 #include "bestadescriptor.h"
-#include "mutekishims_utils.h"
 #include "nowide.h"
 #include "statvfs_common.h"
 

@@ -10,7 +10,6 @@
 #include <muteki/fs.h>
 
 #include "mutekishims_utils.h"
-#include "nowide.h"
 #include "statvfs_common.h"
 
 int statvfs(const char *__path, struct statvfs *__buf) {
