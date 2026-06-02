@@ -23,3 +23,4 @@
 #include <muteki/errno.h>
 #include <muteki/file.h>
 #include <muteki/fs.h>
+#include <muteki/utils.h>

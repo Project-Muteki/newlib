@@ -82,10 +82,11 @@ static int _start_after_fix(int exec_proto_ver, applet_args_v4_t *app_ctx, uintp
 }
 
 // Ensure 8-byte stack alignment for EABI compatibility.
-// Note: This actually has arguments and return value but they are not declared here to prevent potential issue with naked functions. See _start_after_fix for the declaration.
+// Note: This actually has arguments and return value but they are not declared here to prevent potential issue with naked functions.
+//       See _start_after_fix for the declaration.
+// Note 2: Do NOT clobber r0-r2 here as they store parameters passed from the applet caller.
 __attribute__((naked))
 void _start() {
-    // WARNING: Do NOT clobber r0-r2 here or bad thing could happen!
     asm volatile (
         // Align to 8-bytes ourselves
         "push {r4, lr}\n\t"

@@ -12,7 +12,8 @@ int fsync(int fd) {
         return -1;
     }
     switch (dt->type) {
-    case MUTEKI_DESCRIPTOR_DEVNULL: {
+    case MUTEKI_DESCRIPTOR_DEVNULL:
+    case MUTEKI_DESCRIPTOR_DEBUG: {
         __muteki_fd_drop(dt);
         return 0;
     }

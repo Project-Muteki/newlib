@@ -37,6 +37,7 @@ typedef enum {
     MUTEKI_DESCRIPTOR_FILE,
     MUTEKI_DESCRIPTOR_DIRECTORY,
     MUTEKI_DESCRIPTOR_CHARDEV,
+    MUTEKI_DESCRIPTOR_DEBUG,
 } DescriptorTypes;
 
 typedef struct {

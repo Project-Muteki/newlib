@@ -9,7 +9,8 @@ _ssize_t _read_r(struct _reent *r, int fd, void *buf, size_t len) {
     }
 
     switch (dt->type) {
-    case MUTEKI_DESCRIPTOR_DEVNULL: {
+    case MUTEKI_DESCRIPTOR_DEVNULL:
+    case MUTEKI_DESCRIPTOR_DEBUG: {
         memset(buf, 0, len);
         __muteki_fd_drop(dt);
         return len;
