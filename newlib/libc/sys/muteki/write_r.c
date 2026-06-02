@@ -32,6 +32,12 @@ _ssize_t _write_r(struct _reent *r, int fd, const void *buf, size_t len) {
         _REENT_ERRNO(r) = EISDIR;
         return -1;
     }
+    case MUTEKI_DESCRIPTOR_DEBUG: {
+        for (size_t i = 0; i < len; i++) {
+            WriteComDebugMsg("%c", ((const char *) buf)[i]);
+        }
+        return len;
+    }
     case MUTEKI_DESCRIPTOR_CHARDEV: // TODO
     default: {
         __muteki_fd_drop(dt);

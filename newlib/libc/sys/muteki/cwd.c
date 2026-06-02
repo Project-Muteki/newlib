@@ -354,21 +354,19 @@ int fchdir(int fd) {
         return -1;
     }
 
-    switch (fdmap->type) {
-    case MUTEKI_DESCRIPTOR_DEVNULL:
-    case MUTEKI_DESCRIPTOR_FILE:
-        __muteki_fd_drop(fdmap);
-        errno = ENOTDIR;
-        return -1;
-    case MUTEKI_DESCRIPTOR_DIRECTORY: {
+    if (fdmap->type == MUTEKI_DESCRIPTOR_DIRECTORY) {
         __nowide_mbstate_t ctx = {0};
         size_t ret = __nowide_bestawcstombs_r(_REENT, __cwd, fdmap->filename, sizeof(__cwd), &ctx);
-        _wchdir(fdmap->filename);
-        __muteki_fd_drop(fdmap);
         if (ret == ((size_t) -1)) {
+            __muteki_fd_drop(fdmap);
+            errno = EINVAL;
             return -1;
         }
+        _wchdir(fdmap->filename);
+        __muteki_fd_drop(fdmap);
+        return 0;
     }
-    }
-    return 0;
+    __muteki_fd_drop(fdmap);
+    errno = ENOTDIR;
+    return -1;
 }

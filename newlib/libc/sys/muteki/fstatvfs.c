@@ -45,7 +45,8 @@ int fstatvfs(int __fd, struct statvfs *__buf) {
         __muteki_fd_drop(fdmap);
         return statvfs_ret;
     }
-    case MUTEKI_DESCRIPTOR_CHARDEV: {
+    case MUTEKI_DESCRIPTOR_CHARDEV:
+    case MUTEKI_DESCRIPTOR_DEBUG: {
         memset(__buf, 0, sizeof(*__buf));
         __buf->f_bsize = 512;
         __buf->f_frsize = 512;

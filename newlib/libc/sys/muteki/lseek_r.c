@@ -25,7 +25,8 @@ _off_t _lseek_r(struct _reent *r, int fd, _off_t offset, int whence) {
     }
 
     switch (dt->type) {
-    case MUTEKI_DESCRIPTOR_DEVNULL: {
+    case MUTEKI_DESCRIPTOR_DEVNULL:
+    case MUTEKI_DESCRIPTOR_DEBUG: {
         __muteki_fd_drop(dt);
         return 0;
     }

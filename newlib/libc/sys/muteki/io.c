@@ -1,6 +1,5 @@
 #include <fcntl.h>
 #include <sys/unistd.h>
-#include <errno.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -26,7 +25,7 @@ void _init_muteki_io(void) {
     memset(__muteki_fdmap_pool, 0, sizeof(__muteki_fdmap_pool));
 
     // stub stdin/out/err
-    // stdout/err may be connected to WriteComDebugMsg in the future
+    // stdout and stderr are connected to WriteComDebugMsg
     __muteki_fdmap[STDIN_FILENO] = &__muteki_fdmap_pool[STDIN_FILENO];
     __muteki_fdmap[STDIN_FILENO]->handle = NULL;
     __muteki_fdmap[STDIN_FILENO]->type = MUTEKI_DESCRIPTOR_DEVNULL;
@@ -34,12 +33,12 @@ void _init_muteki_io(void) {
 
     __muteki_fdmap[STDOUT_FILENO] = &__muteki_fdmap_pool[STDOUT_FILENO];
     __muteki_fdmap[STDOUT_FILENO]->handle = NULL;
-    __muteki_fdmap[STDOUT_FILENO]->type = MUTEKI_DESCRIPTOR_DEVNULL;
+    __muteki_fdmap[STDOUT_FILENO]->type = MUTEKI_DESCRIPTOR_DEBUG;
     __muteki_fdmap[STDOUT_FILENO]->ref_count = 1;
 
     __muteki_fdmap[STDERR_FILENO] = &__muteki_fdmap_pool[STDERR_FILENO];
     __muteki_fdmap[STDERR_FILENO]->handle = NULL;
-    __muteki_fdmap[STDERR_FILENO]->type = MUTEKI_DESCRIPTOR_DEVNULL;
+    __muteki_fdmap[STDERR_FILENO]->type = MUTEKI_DESCRIPTOR_DEBUG;
     __muteki_fdmap[STDERR_FILENO]->ref_count = 1;
 
     OSLeaveCriticalSection(&_newlib_fd_mutex);
@@ -174,6 +173,8 @@ int __muteki_fd_drop(DescriptorTranslation *map) {
                 }
                 break;
             }
+            default:
+                break;
         }
 
         if (ret != 0) {
