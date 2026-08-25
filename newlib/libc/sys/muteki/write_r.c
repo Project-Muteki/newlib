@@ -14,7 +14,7 @@ _ssize_t _write_r(struct _reent *r, int fd, const void *buf, size_t len) {
         return len;
     }
     case MUTEKI_DESCRIPTOR_FILE: {
-        size_t actual = _fwrite(buf, 1, len, dt->handle);
+        size_t actual = _fwrite(buf, 1, len, dt->file);
         if (actual == 0) {
             int errno_converted = __muteki_kerrno_to_errno(_GetLastError());
             __muteki_fd_drop(dt);

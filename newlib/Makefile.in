@@ -4834,6 +4834,8 @@ libc_ssp_ELIX_SOURCES = libc/ssp/chk_fail.c libc/ssp/stack_protector.c \
 	libc/ssp/strcat_chk.c libc/ssp/strcpy_chk.c \
 	libc/ssp/strncat_chk.c libc/ssp/strncpy_chk.c $(am__append_40)
 @HAVE_LIBC_SYS_ARM_DIR_TRUE@AM_CPPFLAGS_libc_sys_arm = -I$(srcdir)/libc/machine/arm
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@libc_a_CPPFLAGS_libc_sys_muteki = -I$(srcdir)/libc/muteki/include -D_HAS_MUTEKI_SUBMODULE
+@HAVE_LIBC_SYS_MUTEKI_DIR_TRUE@AM_CPPFLAGS_libc_sys_muteki = -I$(srcdir)/libc/muteki/include -D_HAS_MUTEKI_SUBMODULE
 @HAVE_LIBC_MACHINE_CRIS_TRUE@libc_machine_cris_libic_a_SOURCES = 
 @HAVE_LIBC_MACHINE_CRIS_TRUE@libc_machine_cris_libic_a_LIBADD = \
 @HAVE_LIBC_MACHINE_CRIS_TRUE@	libc/machine/cris/libc_a-setjmp.o \

@@ -24,7 +24,7 @@ static const UTF16 *open_flag_to_besta(int flags) {
     }
 }
 
-static find_context_t *__muteki_wfind_under_dir_r(struct _reent *r, const UTF16 *wname) {
+static bxc_find_context_t *__muteki_wfind_under_dir_r(struct _reent *r, const UTF16 *wname) {
     // Process wname into a fnmatch pattern
     UTF16 *fnmatch = __muteki_dir_to_fnmatch(wname);
     if (fnmatch == NULL) {
@@ -33,7 +33,7 @@ static find_context_t *__muteki_wfind_under_dir_r(struct _reent *r, const UTF16 
     }
 
     // Create a new find context and use it as the system directory handle
-    find_context_t *find_ctx = malloc(sizeof(find_context_t));
+    bxc_find_context_t *find_ctx = malloc(sizeof(bxc_find_context_t));
     if (find_ctx == NULL) {
         _REENT_ERRNO(r) = ENOMEM;
         free(fnmatch);
@@ -73,7 +73,7 @@ int _open_r(struct _reent *r, const char *name, int flags, int mode) {
         is_dir = false;
     } else {
         exists = true;
-        is_dir = (attr & ATTR_DIR) != 0;
+        is_dir = (attr & BXC_FS_ATTR_DIR) != 0;
     }
 
     if (!(flags & O_CREAT) && !exists) {

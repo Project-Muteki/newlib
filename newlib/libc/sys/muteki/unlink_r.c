@@ -13,7 +13,7 @@ int _unlink_r(struct _reent *r, const char *name) {
     }
 
     short attr = _wfgetattr(wname);
-    if ((attr & ATTR_DIR) != 0) {
+    if ((attr & BXC_FS_ATTR_DIR) != 0) {
         free(wname);
         _REENT_ERRNO(r) = EISDIR;
         return -1;

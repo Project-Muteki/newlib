@@ -33,7 +33,7 @@ DEALINGS IN THE SOFTWARE.
 #include <string.h>
 
 #include <muteki/errno.h>
-#include <muteki/fs.h>
+#include <muteki/fs/path.h>
 
 #include "bestadescriptor.h"
 #include "mutekishims_utils.h"
@@ -57,7 +57,7 @@ int __get_drive(const char *path) {
 
 static void __init_cwd() {
     __nowide_mbstate_t ctx = {0};
-    UTF16 sys_cwd[SYS_PATH_MAX_CU];
+    UTF16 sys_cwd[BXC_FS_PATH_MAX_CU];
     if (strlen(__cwd) == 0) {
         // init cwd
         if (_wgetcurdir(NULL, sys_cwd) < 0) {
@@ -332,7 +332,7 @@ int chdir(const char *path) {
         return -1;
     }
 
-    if (!(fat_attrib & ATTR_DIR)) {
+    if (!(fat_attrib & BXC_FS_ATTR_DIR)) {
         free(fullpath);
         errno = ENOTDIR;
         return -1;

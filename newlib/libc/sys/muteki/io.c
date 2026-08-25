@@ -4,8 +4,8 @@
 #include <stdlib.h>
 
 #include <muteki/errno.h>
-#include <muteki/file.h>
-#include <muteki/fs.h>
+#include <muteki/fs/file.h>
+#include <muteki/fs/path.h>
 #include <muteki/threading.h>
 
 #include "bestadescriptor.h"
@@ -14,7 +14,7 @@
 DescriptorTranslation *__muteki_fdmap[MAX_OPEN_FILES];
 DescriptorTranslation __muteki_fdmap_pool[MAX_OPEN_FILES];
 
-critical_section_t _newlib_fd_mutex;
+bxc_cs_t _newlib_fd_mutex;
 
 void _init_muteki_io(void) {
     OSInitCriticalSection(&_newlib_fd_mutex);
@@ -159,15 +159,15 @@ int __muteki_fd_drop(DescriptorTranslation *map) {
 
         switch (map->type) {
             case MUTEKI_DESCRIPTOR_FILE: {
-                ret = _fclose(map->handle);
+                ret = _fclose(map->file);
                 if (map->filename) {
                     free(map->filename);
                 }
                 break;
             }
             case MUTEKI_DESCRIPTOR_DIRECTORY: {
-                ret = _findclose((find_context_t *) map->handle);
-                free(map->handle);
+                ret = _findclose(map->find);
+                free(map->find);
                 if (map->filename) {
                     free(map->filename);
                 }
@@ -178,7 +178,7 @@ int __muteki_fd_drop(DescriptorTranslation *map) {
         }
 
         if (ret != 0) {
-            kerrno_t kerrno = _GetLastError();
+            bxc_errno_t kerrno = _GetLastError();
             OSLeaveCriticalSection(&_newlib_fd_mutex);
             return -__muteki_kerrno_to_errno(kerrno);
         }

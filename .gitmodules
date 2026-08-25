@@ -1,0 +1,3 @@
+[submodule "newlib/libc/muteki"]
+	path = newlib/libc/muteki
+	url = https://github.com/Project-Muteki/muteki.git

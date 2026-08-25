@@ -3,7 +3,7 @@
 // gettimeofday
 int _gettimeofday_r(struct _reent *r, struct timeval *tp, void *tzp) {
     struct tm dt_unix;
-    datetime_t dt_besta;
+    bxc_datetime_t dt_besta;
 
     if (tp == NULL) {
         _REENT_ERRNO(r) = EFAULT;

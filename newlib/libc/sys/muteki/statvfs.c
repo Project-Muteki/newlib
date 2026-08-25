@@ -7,7 +7,6 @@
 #include <sys/statvfs.h>
 
 #include <muteki/errno.h>
-#include <muteki/fs.h>
 
 #include "mutekishims_utils.h"
 #include "statvfs_common.h"

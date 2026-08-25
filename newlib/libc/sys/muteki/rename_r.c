@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include <muteki/errno.h>
-#include <muteki/fs.h>
+#include <muteki/fs/path.h>
 #include "nowide.h"
 #include "mutekishims_utils.h"
 

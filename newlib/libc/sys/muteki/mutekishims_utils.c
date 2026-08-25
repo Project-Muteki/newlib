@@ -6,49 +6,48 @@
 #include "mutekishims_utils.h"
 #include "nowide.h"
 
-int __muteki_kerrno_to_errno(kerrno_t kerrno) {
-    short err = KERRNO_ERR(kerrno);
-    short ns = KERRNO_NS(kerrno);
+int __muteki_kerrno_to_errno(bxc_errno_t kerrno) {
+    short err = BXC_ERRNO_ERR(kerrno);
+    short ns = BXC_ERRNO_NS(kerrno);
     switch (ns) {
-    case ERRNO_NS_KERNEL:
+    case BXC_ERRNO_NS_KERNEL:
         switch (err) {
-        case FS_INVALID_DRIVE_LETTER:
+        case BXC_ERR_FS_INVALID_DRIVE_LETTER:
             return ENODEV;
-        case FS_INVALID_FILENAME:
-        case FS_CONFLICTING_ATTR:
-        case FTL_INVALID_LBA:
+        case BXC_ERR_FS_INVALID_FILENAME:
+        case BXC_ERR_FS_CONFLICTING_ATTR:
+        case BXC_ERR_FTL_INVALID_LBA:
             return EINVAL;
-        case FTL_DATA_CORRUPTED:
-        case FTL_ECC_FAILED:
-        case FS_OPERATION_ERROR:
+        case BXC_ERR_FTL_DATA_CORRUPTED:
+        case BXC_ERR_FTL_ECC_FAILED:
+        case BXC_ERR_FS_OPERATION_ERROR:
             return EIO;
-        case FS_ENTRY_EXISTS:
+        case BXC_ERR_FS_ENTRY_EXISTS:
             return EEXIST;
-        case FS_FILE_UNAVAILABLE:
-        case FS_NO_SUCH_ENTRY:
-        case FS_NO_SUCH_ENTRY_ALT:
+        case BXC_ERR_FS_FILE_UNAVAILABLE:
+        case BXC_ERR_FS_NO_SUCH_ENTRY:
+        case BXC_ERR_FS_PATH_TRAVERSAL:
             return ENOENT;
-        case FS_DIR_FULL:
-        case FS_DIR_FULL_ALT1:
-        case FS_DIR_FULL_ALT2:
-        case FS_NO_SPACE_LEFT:
+        case BXC_ERR_FS_DIR_RECORD_GROWTH:
+        case BXC_ERR_FS_EOF_REACHED:
+        case BXC_ERR_FS_FAT16_DIR_ALLOC:
+        case BXC_ERR_FS_NO_SPACE_LEFT:
             return ENOSPC;
-        case MEDIUM_WP_ENABLED:
-        case FS_READ_ONLY_FILE:
+        case BXC_ERR_MEDIUM_WP_ENABLED:
+        case BXC_ERR_FS_READ_ONLY_FILE:
             return EROFS;
-        case FS_FILE_LOCKED:
+        case BXC_ERR_FS_FILE_LOCKED:
             return EBUSY;
-        case FS_PATH_TOO_LONG:
+        case BXC_ERR_FS_PATH_TOO_LONG:
             return ENAMETOOLONG;
-        case FS_TOO_MANY_OPEN_FILES:
+        case BXC_ERR_FS_TOO_MANY_OPEN_FILES:
             return ENFILE;
-        case MEDIUM_UNLOADED:
+        case BXC_ERR_MEDIUM_UNLOADED:
             return ENOMEDIUM;
-        case MEDIUM_INCOMPATIBLE:
+        case BXC_ERR_MEDIUM_INCOMPATIBLE:
             return EMEDIUMTYPE;
         // Explicitly ignore.
-        case FS_FILE_ATTR_ERROR: // May be handled in specific C APIs.
-        case FS_FILE_OOB_ACCESS: // Just truncate the data/length. TODO verify the truncate behavior
+        case BXC_ERR_FS_FILE_ATTR_ERROR: // May be handled in specific C APIs.
         default:
             return 0;
         }

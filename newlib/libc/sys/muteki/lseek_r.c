@@ -3,11 +3,11 @@
 static int whence_to_besta(int whence, int *err) {
     switch (whence) {
     case SEEK_SET:
-        return _SYS_SEEK_SET;
+        return BXC_SEEK_SET;
     case SEEK_CUR:
-        return _SYS_SEEK_CUR;
+        return BXC_SEEK_CUR;
     case SEEK_END:
-        return _SYS_SEEK_END;
+        return BXC_SEEK_END;
     default:
         if (err != NULL) {
             *err = EINVAL;
@@ -39,13 +39,13 @@ _off_t _lseek_r(struct _reent *r, int fd, _off_t offset, int whence) {
             __muteki_fd_drop(dt);
             return -1;
         }
-        int result = __fseek(dt->handle, offset, sys_whence);
+        int result = __fseek(dt->file, offset, sys_whence);
         if (result < 0) {
             _REENT_ERRNO(r) = __muteki_kerrno_to_errno(_GetLastError());
             __muteki_fd_drop(dt);
             return -1;
         }
-        _off_t current_pos = _ftell(dt->handle);
+        _off_t current_pos = _ftell(dt->file);
         __muteki_fd_drop(dt);
         return current_pos;
     }

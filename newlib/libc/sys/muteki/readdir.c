@@ -25,11 +25,11 @@ DEALINGS IN THE SOFTWARE.
 
 #include "dirent_common.h"
 
-static int find_ctx_to_dirent(struct dirent *out, const find_context_t *in) {
+static int find_ctx_to_dirent(struct dirent *out, const bxc_find_context_t *in) {
     __nowide_mbstate_t mbstate = {0};
 
     out->d_fatattrib = in->attrib;
-    if (in->attrib & ATTR_DIR) {
+    if (in->attrib & BXC_FS_ATTR_DIR) {
         out->d_type = DT_DIR;
     } else {
         out->d_type = DT_REG;
@@ -53,19 +53,19 @@ struct dirent *readdir(DIR *dirp) {
     }
 
     if (dirp->index > 0) {
-        short res = _wfindnext((find_context_t *) fdmap->handle);
+        short res = _wfindnext(fdmap->find);
         if (res < 0) {
-            kerrno_t kerrno = _GetLastError();
+            bxc_errno_t kerrno = _GetLastError();
             __muteki_fd_drop(fdmap);
-            // FS_NO_SUCH_ENTRY is raised on end of directory.
-            if (KERRNO_NS(kerrno) != ERRNO_NS_KERNEL || KERRNO_ERR(kerrno) != FS_NO_SUCH_ENTRY) {
+            // BXC_ERR_FS_NO_SUCH_ENTRY is raised on end of directory.
+            if (BXC_ERRNO_NS(kerrno) != BXC_ERRNO_NS_KERNEL || BXC_ERRNO_ERR(kerrno) != BXC_ERR_FS_NO_SUCH_ENTRY) {
                 errno = __muteki_kerrno_to_errno(kerrno);
             }
             return NULL;
         }
     }
 
-    find_ctx_to_dirent(&dirp->dir, (find_context_t *) fdmap->handle);
+    find_ctx_to_dirent(&dirp->dir, fdmap->find);
 
     __muteki_fd_drop(fdmap);
 
