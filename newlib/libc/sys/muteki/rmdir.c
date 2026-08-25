@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 #include <muteki/errno.h>
-#include <muteki/fs.h>
+#include <muteki/fs/path.h>
 
 #include "mutekishims_utils.h"
 #include "nowide.h"

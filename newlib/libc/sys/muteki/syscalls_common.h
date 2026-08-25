@@ -21,6 +21,6 @@
 #include <muteki/common.h>
 #include <muteki/datetime.h>
 #include <muteki/errno.h>
-#include <muteki/file.h>
-#include <muteki/fs.h>
+#include <muteki/fs/file.h>
+#include <muteki/fs/path.h>
 #include <muteki/utils.h>

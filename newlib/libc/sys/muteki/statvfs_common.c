@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include <muteki/errno.h>
-#include <muteki/fs.h>
+#include <muteki/fs/path.h>
 
 #include "statvfs_common.h"
 #include "mutekishims_utils.h"
@@ -25,7 +25,7 @@ static int drive_to_fsid_simple(char drive) {
 }
 
 int __statvfs_drive(char drive, struct statvfs *buf) {
-    fs_stat_t fs_stat = {0};
+    bxc_fs_stat_t fs_stat = {0};
     int fsid = drive_to_fsid_simple(drive);
     if (fsid < 0) {
         errno = EINVAL;

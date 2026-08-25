@@ -3,18 +3,18 @@
 static time_t find_timestamp_to_unix(unsigned int find_ts) {
     struct tm dt;
 
-    dt.tm_year = FIND_TS_YEAR(find_ts) - 1900;
-    dt.tm_mon = FIND_TS_MONTH(find_ts) - 1;
-    dt.tm_mday = FIND_TS_DAY(find_ts);
-    dt.tm_hour = FIND_TS_HOUR(find_ts);
-    dt.tm_min = FIND_TS_MINUTE(find_ts);
-    dt.tm_sec = FIND_TS_SECOND(find_ts);
+    dt.tm_year = BXC_FIND_TS_YEAR(find_ts) - 1900;
+    dt.tm_mon = BXC_FIND_TS_MONTH(find_ts) - 1;
+    dt.tm_mday = BXC_FIND_TS_DAY(find_ts);
+    dt.tm_hour = BXC_FIND_TS_HOUR(find_ts);
+    dt.tm_min = BXC_FIND_TS_MINUTE(find_ts);
+    dt.tm_sec = BXC_FIND_TS_SECOND(find_ts);
     dt.tm_isdst = -1;
 
     return mktime(&dt);
 }
 
-static int stat_from_find_ctx(struct stat *out, find_context_t *in) {
+static int stat_from_find_ctx(struct stat *out, bxc_find_context_t *in) {
     memset(out, 0, sizeof(struct stat));
 
     out->st_size = (off_t) (in->size & 0x7fffffffl);
@@ -23,7 +23,7 @@ static int stat_from_find_ctx(struct stat *out, find_context_t *in) {
     // Linux maps ctime to FAT btime, but Besta's btime is not usable due to a bug (?) on the OS side. So we map ctime to mtime instead.
     out->st_ctime = out->st_mtime;
 
-    if (in->attrib & ATTR_DIR) {
+    if (in->attrib & BXC_FS_ATTR_DIR) {
         out->st_mode |= _IFDIR;
     } else {
         out->st_mode |= _IFREG;
@@ -37,7 +37,7 @@ static int stat_from_find_ctx(struct stat *out, find_context_t *in) {
 
 // fstat
 int _fstat_r(struct _reent *r, int fd, struct stat *st) {
-    find_context_t find_ctx;
+    bxc_find_context_t find_ctx;
     DescriptorTranslation *dt = __muteki_fd_grab(fd);
 
     if (_wfindfirst(dt->filename, &find_ctx, 0) < 0) {
@@ -60,7 +60,7 @@ int _fstat_r(struct _reent *r, int fd, struct stat *st) {
 
 // stat
 int _stat_r(struct _reent *r, const char *name, struct stat *st) {
-    find_context_t find_ctx;
+    bxc_find_context_t find_ctx;
 
     UTF16 *wname = __nowide_prep_path_for_syscall_r(r, name);
     if (wname == NULL) {

@@ -8,7 +8,7 @@
 extern void _init_muteki_io(void); // in io.c
 extern void _free_muteki_io(void); // in io.c
 
-extern int __muteki_kerrno_to_errno(kerrno_t kerrno);
+extern int __muteki_kerrno_to_errno(bxc_errno_t kerrno);
 extern UTF16 *__muteki_dir_to_fnmatch(const UTF16 *path);
 
 extern int __get_drive(const char *path);

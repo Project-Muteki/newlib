@@ -29,6 +29,8 @@ DEALINGS IN THE SOFTWARE.
 #define __MUTEKI_LIBC_BESTADESCRIPTOR_H__
 
 #include <muteki/common.h>
+#include <muteki/fs/file.h>
+#include <muteki/fs/path.h>
 
 #define MAX_OPEN_FILES 256
 
@@ -41,7 +43,11 @@ typedef enum {
 } DescriptorTypes;
 
 typedef struct {
-    void *handle;
+    union {
+        void *handle;
+        bxc_fs_file_t *file;
+        bxc_find_context_t *find;
+    };
     DescriptorTypes type;
     int ref_count;
     UTF16 *filename;

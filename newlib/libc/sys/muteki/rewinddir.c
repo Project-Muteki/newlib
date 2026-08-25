@@ -26,7 +26,7 @@ DEALINGS IN THE SOFTWARE.
 #include "dirent_common.h"
 
 void rewinddir(DIR *dirp) {
-    find_context_t new_dirfd;
+    bxc_find_context_t new_dirfd;
 
     if (!dirp) {
         errno = EBADF;
@@ -54,8 +54,8 @@ void rewinddir(DIR *dirp) {
         return;
     }
 
-    _findclose(fdmap->handle);
-    memcpy(fdmap->handle, &new_dirfd, sizeof(new_dirfd));
+    _findclose(fdmap->find);
+    memcpy(fdmap->find, &new_dirfd, sizeof(new_dirfd));
     __muteki_fd_drop(fdmap);
 
     dirp->index = 0;

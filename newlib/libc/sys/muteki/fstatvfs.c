@@ -7,7 +7,7 @@
 #include <sys/statvfs.h>
 
 #include <muteki/errno.h>
-#include <muteki/fs.h>
+#include <muteki/fs/path.h>
 
 #include "bestadescriptor.h"
 #include "nowide.h"
@@ -27,13 +27,13 @@ int fstatvfs(int __fd, struct statvfs *__buf) {
     case MUTEKI_DESCRIPTOR_DIRECTORY: {
         __nowide_mbstate_t ctx = {0};
 
-        char *rpath = malloc(SYS_PATH_MAX_CU * 3);
+        char *rpath = malloc(BXC_FS_PATH_MAX_CU * 3);
         if (rpath == NULL) {
             errno = ENOMEM;
             return -1;
         }
 
-        size_t ret = __nowide_bestawcstombs_r(_REENT, rpath, fdmap->filename, SYS_PATH_MAX_CU * 3, &ctx);
+        size_t ret = __nowide_bestawcstombs_r(_REENT, rpath, fdmap->filename, BXC_FS_PATH_MAX_CU * 3, &ctx);
         if (ret == ((size_t) -1)) {
             free(rpath);
             __muteki_fd_drop(fdmap);

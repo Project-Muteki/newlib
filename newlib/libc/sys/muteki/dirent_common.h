@@ -34,7 +34,7 @@ DEALINGS IN THE SOFTWARE.
 #include <unistd.h>
 
 #include <muteki/common.h>
-#include <muteki/fs.h>
+#include <muteki/fs/path.h>
 #include "bestadescriptor.h"
 #include "mutekishims_utils.h"
 #include "nowide.h"

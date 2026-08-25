@@ -3,7 +3,7 @@
 #include "bestadescriptor.h"
 #include "mutekishims_utils.h"
 
-#include <muteki/file.h>
+#include <muteki/fs/file.h>
 
 int fsync(int fd) {
     DescriptorTranslation *dt = __muteki_fd_grab(fd);
@@ -18,7 +18,7 @@ int fsync(int fd) {
         return 0;
     }
     case MUTEKI_DESCRIPTOR_FILE: {
-        if (__fflush(dt->handle) != 0) {
+        if (__fflush(dt->file) != 0) {
             int errno_converted = __muteki_kerrno_to_errno(_GetLastError());
             __muteki_fd_drop(dt);
             if (errno_converted != 0) {

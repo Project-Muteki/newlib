@@ -1,3 +1,6 @@
+libc_a_CPPFLAGS_%C% = -I$(srcdir)/libc/muteki/include -D_HAS_MUTEKI_SUBMODULE
+AM_CPPFLAGS_%C% = -I$(srcdir)/libc/muteki/include -D_HAS_MUTEKI_SUBMODULE
+
 libc_a_SOURCES += \
     %D%/applet_main.c \
     %D%/applet_reset.c \
