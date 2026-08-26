@@ -4,7 +4,14 @@
 #include <newlib.h>
 #include <_ansi.h>
 
-#ifdef _HAS_MUTEKI_SUBMODULE
+/* Physically test for header in case it is used in GCC combined tree before
+ * muteki is installed. 
+ * TODO: __has_include may not be portable (do we actually care?) */
+#if (defined(_LIBC) && !defined(_HAS_MUTEKI_SUBMODULE)) || (!__has_include("muteki/threading.h"))
+#define __USE_FALLBACK_BXC_LOCK_DEFN
+#endif
+
+#ifndef __USE_FALLBACK_BXC_LOCK_DEFN
 #include <muteki/threading.h>
 #endif
 
@@ -15,7 +22,7 @@ extern "C" {
 /* Provide minimal definitions when muteki is unavailable. These must be kept
  * in sync with the shims although it should be stable enough to not require
  * any changes. */
-#ifndef _HAS_MUTEKI_SUBMODULE
+#ifdef __USE_FALLBACK_BXC_LOCK_DEFN
 struct bxc_thread_s;
 typedef struct bxc_thread_s bxc_thread_t;
 
